@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Neil Ramilo</title>
+    </head>
+    <script src="http://code.jquery.com/jquery-1.5.min.js"></script>
+                       
+        <form>
+            <h1>Performance Task 1</h1>
+            
+            <p>Structuring Patterns of UI Software Architecture <br>
+            <i>(Model-View-Controller)</p></i>
+           
+            <body> 
+                
+                   <div id="msg">
+                       <div class="container">
+                           <h2>What are you doing now?</h2>
+                            <label>Name :</label>
+                            <input type="text" id="name" placeholder="Please Enter your Name..."><br><br>
+                            <label>Date : </label>
+                            <input type="date" id="date"><br><br>
+                            <label>Message :</label>
+                            <textarea id="txtArea" placeholder="Please Enter your Message..."></textarea><br><br>
+                            <button id="btn">Send Message</button>
+                        </div>
+                </div>
+                </form>
+                </body>
+            
+            <script>
+<script>
+$( "p" ).click(function() {
+  $( this ).slideUp();
+});
+</script>
+            
+                    $(document).ready(function () {
+            
+                        $("#btn").click(function () {
+            
+                            var name = $("#name").val();
+                            var date = $("#date").val();
+                            var txt = $("#txtArea").val();
+                            console.log(name, date, txt);
+                                
+                    
+                            $("#msg").html("<b>Name :</b> " +  name + "<br><b>Date :</b> " +  date + 
+                            "<br><b>Sent Message Appear Here : </b> ").css("border", "5px solid gray");
+                            $("#msg").append(txt);
+                            
+                        });
+            
+                    });
+            
+            
+                </script>
+        
+</html>
+
+  
